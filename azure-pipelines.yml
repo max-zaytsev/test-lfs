@@ -1,3 +1,7 @@
+variables:
+  - name: System.Debug
+    value: true
+
 resources:
  repositories:
    - repository: xamarin
