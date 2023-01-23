@@ -21,5 +21,7 @@ steps:
   submodules: recursive
   fetchTags: False
   fetchDepth: 0
+  path: monodroid-samples
+
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
