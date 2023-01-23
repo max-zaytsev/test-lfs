@@ -7,7 +7,7 @@ trigger:
 - main
 
 pool:
-  vmImage: ubuntu-latest
+  name: v-mazayt-windows
 
 steps:
 - script: echo Hello, world!
