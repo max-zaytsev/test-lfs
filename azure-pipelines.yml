@@ -18,6 +18,8 @@ pool:
 
 steps:
 - checkout: xamarin
-
+  submodules: recursive
+  fetchTags: False
+  fetchDepth: 0
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
