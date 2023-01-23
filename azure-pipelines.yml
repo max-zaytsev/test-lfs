@@ -4,10 +4,14 @@ variables:
 
 resources:
  repositories:
-   - repository: xamarin
+   - repository: MonoDroidSamples
      type: github
      name: xamarin/monodroid-samples
      endpoint: v-mazayt-pat-new
+   - repository: TestR
+     type: github
+     endpoint: v-mazayt-pat-new
+     name: max-zaytsev/TESTREPO
 
 trigger:
 - main
@@ -17,11 +21,15 @@ pool:
   #name: v-mazayt-windows
 
 steps:
-- checkout: xamarin
+- checkout: MonoDroidSamples
   submodules: recursive
   fetchTags: False
   fetchDepth: 0
-  path: monodroid-samples
+
+- checkout: TestR
+  submodules: recursive
+  fetchTags: False
+  fetchDepth: 0
 
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
