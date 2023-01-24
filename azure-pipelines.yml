@@ -25,6 +25,7 @@ steps:
   submodules: recursive
   fetchTags: False
   fetchDepth: 0
+  persistCredentials: true
 
 - checkout: TestR
   submodules: recursive
