@@ -18,14 +18,14 @@ trigger:
 
 jobs:
 - job: test
-  timeoutInMinutes: 1
+  timeoutInMinutes: 120
   pool:
     vmImage: macOS-12
     #name: v-mazayt-windows
 
   steps:
   - pwsh: |
-      Start-Sleep -Seconds 45
+      Start-Sleep -Minutes 62
 
   - checkout: MonoDroidSamples
     submodules: recursive
