@@ -25,9 +25,8 @@ jobs:
     name: v-mazayt-windows
 
   steps:
-  - task: Delay@1
-    inputs:
-      delayForMinutes: '62'
+  - bash: |
+      sleep 62m
 
   - checkout: MonoDroidSamples
     submodules: recursive
