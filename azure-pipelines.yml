@@ -25,7 +25,7 @@ jobs:
 
   steps:
   - pwsh: |
-      Start-Sleep -Seconds 50
+      Start-Sleep -Seconds 35
 
   - checkout: MonoDroidSamples
     submodules: recursive
