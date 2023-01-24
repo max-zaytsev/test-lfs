@@ -16,21 +16,26 @@ resources:
 trigger:
 - main
 
-pool:
-  vmImage: macOS-12
-  #name: v-mazayt-windows
+jobs:
+- job: test
+  timeoutInMinutes: 1
+  pool:
+    vmImage: macOS-12
+    #name: v-mazayt-windows
 
-steps:
-- checkout: MonoDroidSamples
-  submodules: recursive
-  fetchTags: False
-  fetchDepth: 0
-  persistCredentials: true
+  steps:
+  - pwsh: |
+      Start-Sleep -Seconds 50
 
-- checkout: TestR
-  submodules: recursive
-  fetchTags: False
-  fetchDepth: 0
+  - checkout: MonoDroidSamples
+    submodules: recursive
+    fetchTags: False
+    fetchDepth: 0
 
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
+  - checkout: TestR
+    submodules: recursive
+    fetchTags: False
+    fetchDepth: 0
+
+  - script: echo Hello, world!
+    displayName: 'Run a one-line script'
