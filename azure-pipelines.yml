@@ -7,8 +7,8 @@ resources:
    - repository: MonoDroidSamples
      type: github
      name: xamarin/monodroid-samples
-     #endpoint: v-mazayt-pat-new
-     endpoint: github.com_max-zaytsev
+     endpoint: v-mazayt-pat-new
+     #endpoint: github.com_max-zaytsev
    - repository: TestR
      type: github
      endpoint: v-mazayt-pat-new
@@ -25,8 +25,9 @@ jobs:
     name: v-mazayt-windows
 
   steps:
-  - powershell: |
-      Start-Sleep -Seconds ((60*60)+120)
+  - task: Delay@1
+    inputs:
+      delayForMinutes: '62'
 
   - checkout: MonoDroidSamples
     submodules: recursive
