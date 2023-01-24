@@ -21,8 +21,8 @@ jobs:
 - job: test
   timeoutInMinutes: 120
   pool:
-    #vmImage: macOS-12
-    name: v-mazayt-windows
+    vmImage: macOS-12
+    #name: v-mazayt-windows
 
   steps:
   - bash: |
