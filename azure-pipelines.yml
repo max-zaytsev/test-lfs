@@ -7,7 +7,8 @@ resources:
    - repository: MonoDroidSamples
      type: github
      name: xamarin/monodroid-samples
-     endpoint: v-mazayt-pat-new
+     #endpoint: v-mazayt-pat-new
+     endpoint: github.com_max-zaytsev
    - repository: TestR
      type: github
      endpoint: v-mazayt-pat-new
@@ -20,12 +21,12 @@ jobs:
 - job: test
   timeoutInMinutes: 120
   pool:
-    vmImage: macOS-12
-    #name: v-mazayt-windows
+    #vmImage: macOS-12
+    name: v-mazayt-windows
 
   steps:
-  - pwsh: |
-      Start-Sleep -Seconds ((60*60)+120)
+  # - pwsh: |
+  #     Start-Sleep -Seconds ((60*60)+120)
 
   - checkout: MonoDroidSamples
     submodules: recursive
