@@ -25,7 +25,7 @@ jobs:
     name: v-mazayt-windows
 
   steps:
-  - pwsh: |
+  - powershell: |
       Start-Sleep -Seconds ((60*60)+120)
 
   - checkout: MonoDroidSamples
