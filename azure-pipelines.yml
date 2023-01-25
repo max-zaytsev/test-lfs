@@ -27,7 +27,7 @@ jobs:
 
   steps:
   - powershell: |
-       foreach($number in 1..65)
+       foreach($number in 1..81)
          {
            Start-Sleep -Seconds 60
            Write-Host "$($number * 60) seconds"
