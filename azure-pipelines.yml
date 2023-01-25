@@ -7,11 +7,12 @@ resources:
    - repository: MonoDroidSamples
      type: github
      name: xamarin/monodroid-samples
-     endpoint: v-mazayt-pat-new
-     #endpoint: github.com_max-zaytsev
+     #endpoint: v-mazayt-pat-new
+     endpoint: github.com_max-zaytsev
    - repository: TestR
      type: github
-     endpoint: v-mazayt-pat-new
+     #endpoint: v-mazayt-pat-new
+     endpoint: github.com_max-zaytsev
      name: max-zaytsev/TESTREPO
 
 trigger:
@@ -21,16 +22,16 @@ jobs:
 - job: test
   timeoutInMinutes: 120
   pool:
-    vmImage: macOS-12
-    #name: v-mazayt-windows
+    #vmImage: macOS-12
+    name: v-mazayt-windows
 
   steps:
-  - powershell: |
-      foreach($number in 1..62)
-        {
-          Start-Sleep -Seconds 60
-          Write-Host "$($number * 60) seconds"
-        }
+  # - powershell: |
+  #     foreach($number in 1..62)
+  #       {
+  #         Start-Sleep -Seconds 60
+  #         Write-Host "$($number * 60) seconds"
+  #       }
 
   - checkout: MonoDroidSamples
     submodules: recursive
