@@ -26,10 +26,10 @@ jobs:
 
   steps:
   - powershell: |
-      foreach($number in 1..3)
+      foreach($number in 1..62)
         {
-          Start-Sleep -Seconds 2
-          Write-Host "$($number * 2) seconds"
+          Start-Sleep -Seconds 60
+          Write-Host "$($number * 60) seconds"
         }
 
   - checkout: MonoDroidSamples
