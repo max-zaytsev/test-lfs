@@ -7,7 +7,7 @@ resources:
    - repository: MonoDroidSamples
      type: github
      name: xamarin/monodroid-samples
-     endpoint: v-mazayt-pat-new
+     endpoint: max-zaytsev(1)
      #endpoint: github.com_max-zaytsev
    - repository: TestR
      type: github
@@ -39,6 +39,11 @@ jobs:
     fetchDepth: 0
 
   - checkout: TestR
+    submodules: recursive
+    fetchTags: False
+    fetchDepth: 0
+
+  - checkout: self
     submodules: recursive
     fetchTags: False
     fetchDepth: 0
