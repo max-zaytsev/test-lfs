@@ -4,15 +4,15 @@ variables:
 
 resources:
  repositories:
-   - repository: MY
-     type: github
-     name: max-zaytsev/test-lfs
-     endpoint: "max-zaytsev (1)"
+  #  - repository: MY
+  #    type: github
+  #    name: max-zaytsev/test-lfs
+  #    endpoint: "max-zaytsev (1)"
    - repository: MonoDroidSamples
      type: github
      name: xamarin/monodroid-samples
-     endpoint: v-mazayt-pat-new
-     #endpoint: github.com_max-zaytsev
+     #endpoint: v-mazayt-pat-new
+     endpoint: github.com_max-zaytsev
    - repository: TestR
      type: github
      #endpoint: v-mazayt-pat-new
@@ -24,14 +24,14 @@ trigger:
 
 jobs:
 - job: test
-  timeoutInMinutes: 120
+  timeoutInMinutes: 130
   pool:
     vmImage: macOS-12
     #name: v-mazayt-windows
 
   steps:
   - powershell: |
-      foreach($number in 1..62)
+      foreach($number in 1..122)
         {
           Start-Sleep -Seconds 60
           Write-Host "$($number * 60) seconds"
@@ -47,10 +47,10 @@ jobs:
     fetchTags: False
     fetchDepth: 0
 
-  - checkout: My
-    submodules: recursive
-    fetchTags: False
-    fetchDepth: 0
+  # - checkout: My
+  #   submodules: recursive
+  #   fetchTags: False
+  #   fetchDepth: 0
 
   - script: echo Hello, world!
     displayName: 'Run a one-line script'
