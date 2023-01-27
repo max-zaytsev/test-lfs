@@ -7,7 +7,7 @@ resources:
    - repository: MonoDroidSamples
      type: github
      name: xamarin/monodroid-samples
-     endpoint: max-zaytsev(1)
+     endpoint: v-mazayt-pat-new
      #endpoint: github.com_max-zaytsev
    - repository: TestR
      type: github
