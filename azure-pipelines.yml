@@ -4,6 +4,10 @@ variables:
 
 resources:
  repositories:
+   - repository: MY
+     type: github
+     name: max-zaytsev/test-lfs
+     endpoint: "max-zaytsev (1)"
    - repository: MonoDroidSamples
      type: github
      name: xamarin/monodroid-samples
@@ -43,7 +47,7 @@ jobs:
     fetchTags: False
     fetchDepth: 0
 
-  - checkout: self
+  - checkout: My
     submodules: recursive
     fetchTags: False
     fetchDepth: 0
