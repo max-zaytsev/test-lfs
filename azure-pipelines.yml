@@ -30,12 +30,12 @@ jobs:
     #name: v-mazayt-windows
 
   steps:
-  # - powershell: |
-  #     foreach($number in 1..62)
-  #       {
-  #         Start-Sleep -Seconds 60
-  #         Write-Host "$($number * 60) seconds"
-  #       }
+  - powershell: |
+      foreach($number in 1..62)
+        {
+          Start-Sleep -Seconds 60
+          Write-Host "$($number * 60) seconds"
+        }
 
   - checkout: MonoDroidSamples
     submodules: recursive
